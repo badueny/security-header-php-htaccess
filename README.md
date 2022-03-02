@@ -7,7 +7,10 @@ Security Header PHP and .htaccess
     header('X-Frame-Options: DENY');
     header('X-XSS-Protection: 1; mode=block');
     header('X-Content-Type-Options: nosniff');
-    header('Strict-Transport-Security: max-age=31536000; includeSubDomains');
+    header('Strict-Transport-Security: max-age=63072000; includeSubDomains; preload');
+    header('Expect-CT: max-age=7776000, enforce');
+    header('Access-Control-Allow-Origin: null');
+    header('Cross-Origin-Resource-Policy: "cross-origin"');
     header('Referrer-Policy: same-origin');
     header('Permissions-Policy: geolocation=(), microphone=(), accelerometer=(), gyroscope=(), magnetometer=(), interest-cohort=()');
     header('X-Powered-By: " "');
