@@ -11,7 +11,7 @@ Security Header PHP and .htaccess
     header('Referrer-Policy: same-origin');
     header('Permissions-Policy: geolocation=(), microphone=(), accelerometer=(), gyroscope=(), magnetometer=(), interest-cohort=()');
     header('X-Powered-By: " "');
-    header('x-turbo-charged-by: " "');
+    header('Content-Security-Policy: upgrade-insecure-requests');
 ~~~
 
 ## _.htaccess_
@@ -29,6 +29,6 @@ Security Header PHP and .htaccess
   Header always set X-Frame-Options "SAMEORIGIN"
   Header set X-Powered-By " "
   Header always set Permissions-Policy "geolocation=(), microphone=(), accelerometer=(), gyroscope=(), magnetometer=(), interest-cohort=()"
-  Header set x-turbo-charged-by " "
+  Header set Content-Security-Policy "upgrade-insecure-requests"
 </IfModule>
 ~~~~
