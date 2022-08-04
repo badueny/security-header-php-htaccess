@@ -33,5 +33,7 @@ Security Header PHP and .htaccess
   Header set X-Powered-By " "
   Header always set Permissions-Policy "geolocation=(), microphone=(), accelerometer=(), gyroscope=(), magnetometer=(), interest-cohort=()"
   Header set Content-Security-Policy "upgrade-insecure-requests"
+  #if Error insecure request
+  #Header set Content-Security-Policy "style-src 'unsafe-inline' 'self' https://fonts.googleapis.com;font-src 'self' https://fonts.gstatic.com; default-src 'self'; script-src 'unsafe-inline' 'self'"
 </IfModule>
 ~~~~
